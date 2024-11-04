@@ -1,0 +1,274 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cart-icon {
+    position: relative;
+    text-decoration: none;
+}
+
+.header-icons .cart-icon img {
+    width: 2rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+/**/
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .header-icons {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 0; /* Ajusta el valor según la altura del header */
+    padding: 20px;
+    background-color: #f5f5f5; /* Opcional: color de fondo para destacar el contenedor */
+    border-radius: 8px; /* Bordes redondeados para darle un mejor aspecto */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+}
+
+
+/* Estilos para el título */
+.titulo {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase; /* Opcional: convierte el texto en mayúsculas */
+    border-bottom: 2px solid #333; /* Línea decorativa debajo del título */
+    padding-bottom: 10px;
+}
+
+
+/* Estilos para el contenedor del carrito */
+#cart-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* Footer fijo en la parte inferior */
+.footer-section {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 10px 0;
+    font-size: 0.9em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-content {
+    padding-bottom: 80px;
+}
+
+
+
+
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: #333;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1 1 250px;
+    margin: 10px;
+}
+
+.footer-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-description {
+    line-height: 1.6;
+}
+
+.footer-link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-link {
+    color: #f5f5f5;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffa500;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffa500;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+    color: #aaa;
+    font-size: 0.85em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2em;
+    }
+    .about-intro,
+    .about-mission,
+    .about-features li,
+    .about-quote,
+    .footer-title,
+    .footer-description {
+        font-size: 1em;
+    }
+    .about-subtitle {
+        font-size: 1.5em;
+    }
+    .footer-container {
+        text-align: center;
+        flex-direction: column;
+    }
+}
